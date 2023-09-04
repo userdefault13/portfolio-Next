@@ -4,27 +4,25 @@ import { scrollToSection } from './scrollUtils';
 import { SocialIcon } from 'react-social-icons';
 import ProjectPage from './ProjectPage';
 
-
 const HomePage = () => {
   const [isAnimating, setIsAnimating] = useState(false);
-  
 
   const handleClickProjects = () => {
-    console.log('button clicked')
+    console.log('button clicked');
     setIsAnimating(true); // Start the animation
-    console.log(isAnimating)
+    console.log(isAnimating);
     setTimeout(() => {
       setIsAnimating(true);
     }, 100);
   };
-  
+
   const handleClickProjectsBack = () => {
-    console.log('button clicked')
+    console.log('button clicked');
     setIsAnimating(false); // Start the animation
-    console.log(isAnimating)
+    console.log(isAnimating);
     // You can add any additional logic here if needed
   };
-  
+
   useEffect(() => {
     const experienceLink = document.getElementById('experience-link');
 
@@ -40,13 +38,13 @@ const HomePage = () => {
       aboutLink.addEventListener('click', () => {
         scrollToSection('about'); // Use the imported function
       });
-    };
+    }
 
     const mask = document.querySelector('.mask') as HTMLElement;
 
     if (!mask) {
       return;
-    };
+    }
 
     const handleMouseMove = (pos: MouseEvent) => {
       let x = (pos.clientX / window.innerWidth) * 100;
@@ -75,34 +73,34 @@ const HomePage = () => {
             <div className="details">
               <h1 className="text-6xl text-blue-600 font-bold mb-2">userDef@ult</h1>
               <h2 className="text-xl text-blue-400 mb-2">Lead Designer @ Orium Network</h2>
-              <p className=" text-blue-200">Building web3 games, web2 apps, and UX/UI designer</p>
+              <p className="text-blue-200">Building web3 games, web2 apps, and UX/UI designer</p>
             </div>
 
             <div className="nav justify-between">
               <button onClick={() => scrollToSection('about')} className="block mb-2 text-white">About</button>
               <button onClick={() => scrollToSection('experience')} className="block mb-2 text-white">Experience</button>
               <button onClick={handleClickProjects} className="block mb-2 text-white">Projects</button>
-              <button className="block mb-2 text-white contact-link">Contact</button> 
+              <button className="block mb-2 text-white contact-link">Contact</button>
             </div>
 
             <div className="socials mb-8">
-              <SocialIcon 
+              <SocialIcon
                 url="https://twitter.com/userDefault_0x"
                 className="text-blue-600 mx-2"
               />
-              <SocialIcon 
+              <SocialIcon
                 url="https://github.com/userdefault13"
                 className="text-blue-600 mx-2"
               />
-              <SocialIcon 
+              <SocialIcon
                 url="https://www.linkedin.com/in/julius-wong-5151a6211/"
                 className="text-blue-600 mx-2"
               />
-              <SocialIcon 
+              <SocialIcon
                 url="https://www.behance.net/Userdefault"
                 className="text-blue-600 mx-2"
               />
-              <SocialIcon 
+              <SocialIcon
                 url="https://discord.gg/nrMdzxhgq5"
                 className="text-blue-600 mx-2"
               />
@@ -120,25 +118,25 @@ const HomePage = () => {
                 <br />
                 <br />
                 <p>When I’m not at the computer, I'm with my family and tending to my garden."</p>
-                <div className='grid place-items-center max-h-full p-14' onClick={() => scrollToSection('experience')}>  
+                <div className='grid place-items-center max-h-full p-14' onClick={() => scrollToSection('experience')}>
                   <svg className='svg-container' width="46" height="28" viewBox="0 0 23 14" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <g clipPath="url(#clip0_530_249748)">
-                    <path d="M2.5 2.5L11.3 11.3L20.1 2.5" stroke="#253959" strokeWidth="5" strokeLinecap="round" strokeLinejoin="round"/>
+                      <path d="M2.5 2.5L11.3 11.3L20.1 2.5" stroke="#253959" strokeWidth="5" strokeLinecap="round" strokeLinejoin="round"/>
                     </g>
                     <defs>
-                    <clipPath id="clip0_530_249748">
-                    <rect width="22.7" height="13.8" fill="white"/>
-                    </clipPath>
+                      <clipPath id="clip0_530_249748">
+                        <rect width="22.7" height="13.8" fill="white"/>
+                      </clipPath>
                     </defs>
                   </svg>
                 </div>
               </div>
-            </div>  
+            </div>
             {/* List of work experience cards */}
             <div id="experience" className='min-h-screen pt-14 pb -14'>
               <h3 className='text-center text-4xl pb-10 '>Experience</h3>
               <ExperienceCard
-                title="Co-Founder & Product Designer"
+                title="Co-Founder &amp; Product Designer"
                 company="Digitally Ghostly Studio"
                 dates="2023 - Present"
                 descriptions={[
@@ -204,7 +202,7 @@ const HomePage = () => {
           <div id='projects' className={`items-start projects${isAnimating ? ' projects-on' : ''}`}>
             <h1 className='text-center mb-4'>Portfolio</h1>
             <div className="grid grid-cols-1 gap-8 mb-4">
-                <ProjectPage />
+              <ProjectPage />
             </div>
             <button onClick={handleClickProjectsBack} className='bg-blue-500 px-5 py-2 rounded-lg text-white w-fit '>
               Close
