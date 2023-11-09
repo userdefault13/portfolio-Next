@@ -1,4 +1,5 @@
 import React from 'react';
+import Image from 'next/image';
 
 interface ProjectCardProps {
     title: string;
@@ -12,7 +13,12 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
 }) => {
     return (
     <div className="w-fit h-fit rounded overflow-hidden shadow-lg">
-        <img className="w-full" src={image} alt={title} />
+        <Image
+            src={image}
+            alt={title}
+            layout="fill" // This ensures the image takes up the full container size
+            objectFit="cover" // Adjust as needed (cover, contain, etc.)
+        />
         <div className="px-6 py-4">
         <div className="font-bold text-xl mb-2">{title}</div>
         <p className="text-gray-700 text-base">

@@ -1,10 +1,11 @@
 import React, { useState } from 'react';
 import ProjectCard from './ProjectCard'; // Make sure to import the ProjectCard component
+import { url } from 'inspector';
 
 const ProjectPage = () => {
   // An example array of projects, replace this with your actual data
     const allProjects = [
-        { title: 'Game Name 1', description: 'Description 1', image: '/path/to/image1.png' },
+        { title: 'Game Name 1', description: 'Description 1', image: '/public/.svg'},
         { title: 'Game Name 2', description: 'Description 2', image: '/path/to/image2.png' },
         { title: 'Game Name 3', description: 'Description 3', image: '/path/to/image3.png' },
         { title: 'Game Name 4', description: 'Description 4', image: '/path/to/image4.png' },

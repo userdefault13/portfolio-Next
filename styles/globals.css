@@ -36,6 +36,8 @@ body {
   height: 100vh;
   background-position: center center;
   background-size: cover;
+  background-repeat: no-repeat;
+  background-image: url('/public/fewfwe.svg');
 }
 
 
@@ -152,4 +154,8 @@ button:hover {
   transform: translateY(-100%);
   transition: transform 0.5s ease;
   visibility: hidden;
+}
+
+.bg {
+  background-image: url('/public/fewfwe.svg');
 }

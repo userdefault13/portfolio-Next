@@ -63,13 +63,13 @@ const HomePage = () => {
 
   return (
     <div className='mx-0'>
-      <div className="container relative m-0">
+      <div className="container relative m-0 bg">
         {/* Spotlight mask */}
         <div className="mask"></div>
 
         <div className="flex h-screen pt-10 px-32 w-screen">
           {/* Left Section */}
-          <div className={`w-1/2 flex flex-col justify-between p-10 pb-0 overflow-y-scroll left-container${isAnimating ? ' slide-out-down' : ''}`}>
+          <div className={`w-1/2 flex flex-col justify-between p-10 pb-0 pl-0 overflow-y-scroll left-container${isAnimating ? ' slide-out-down' : ''}`}>
             <div className="details">
               <h1 className="text-6xl text-blue-600 font-bold mb-2">userDef@ult</h1>
               <h2 className="text-xl text-blue-400 mb-2">Lead Designer @ Orium Network</h2>
@@ -111,13 +111,13 @@ const HomePage = () => {
             <div id="about" className='h-full flex flex-col items-start'>
               {/* Content */}
               <div className="">
-                <p>In 2011, I decided to go down the road of pursuing what makes me happy. It started with going back to school for architecture and ended up building in the metaverse instead. And on my incredibly winding road of happiness seeking, I have scooped up a plethora of skills and experiences I never would have imagined learning. Today I'm blessed to be the lead designer of a promising web3 startup and collaborating with amazing individuals on various projects around the world.</p>
+                <p>In 2011, I decided to go down the road of pursuing what makes me happy. It started with going back to school for architecture and ended up building in the metaverse instead. And on my incredibly winding road of happiness seeking, I have scooped up a plethora of skills and experiences I never would have imagined learning. Today I am blessed to be the lead designer of a promising web3 startup and collaborating with amazing individuals on various projects around the world.</p>
                 <br />
                 <br />
                 <p>My main objective currently is to support Orium Network on its course of becoming a prominent figure in the NFT rental marketplace. My love project is building mini-games for a web3 gaming community. My end goal is to inspire and encourage future entrepreneurs and builders by sharing my experience and collaborating.</p>
                 <br />
                 <br />
-                <p>When I’m not at the computer, I'm with my family and tending to my garden."</p>
+                <p>When I am not at the computer, I am with my family and tending to my garden.</p>
                 <div className='grid place-items-center max-h-full p-14' onClick={() => scrollToSection('experience')}>
                   <svg className='svg-container' width="46" height="28" viewBox="0 0 23 14" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <g clipPath="url(#clip0_530_249748)">
