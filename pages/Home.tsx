@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import ExperienceCard from './ExperienceCard';
-import { scrollToSection } from './scrollUtils';
+import  scrollToSection  from './scrollUtils';
 import { SocialIcon } from 'react-social-icons';
 import ProjectPage from './ProjectPage';
 
